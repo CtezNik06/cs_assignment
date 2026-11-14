@@ -1,4 +1,4 @@
-﻿# Web Server Vulnerabilities & Defensive Engineering Lab
+# Web Server Vulnerabilities & Defensive Engineering Lab
 
 [![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![Flask](https://img.shields.io/badge/Flask-3.0+-000000?style=flat&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
@@ -8,40 +8,40 @@ A comprehensive university security lab demonstrating real-world web server vuln
 
 ---
 
-## ðŸ›ï¸ Architecture Strategy: Standalone Folder Structure
+## Architecture Strategy: Standalone Folder Structure
 
 To ensure zero merge conflicts and complete modularity, each group member maintains an isolated, self-contained Python Flask application running inside their own directory. Each application includes both a vulnerable route (`/vuln`) and a hardened route (`/patched`).
 
 ```text
 cs_assignment/
-â”œâ”€â”€ .gitignore
-â”œâ”€â”€ requirements.txt
-â”œâ”€â”€ README.md                           # Main documentation & mapping table
-â”œâ”€â”€ member1_sqli/                       # Member 1: SQL Injection (Auth Bypass)
-â”‚   â”œâ”€â”€ app.py                         (Port 5001)
-â”‚   â”œâ”€â”€ exploit.py
-â”‚   â””â”€â”€ README.md
-â”œâ”€â”€ member2_command_injection/         # Member 2: OS Command Injection
-â”‚   â”œâ”€â”€ app.py                         (Port 5002)
-â”‚   â”œâ”€â”€ exploit.py
-â”‚   â””â”€â”€ README.md
-â”œâ”€â”€ member3_xss/                       # Member 3: Stored Cross-Site Scripting
-â”‚   â”œâ”€â”€ app.py                         (Port 5003)
-â”‚   â”œâ”€â”€ exploit_payload.txt
-â”‚   â””â”€â”€ README.md
-â”œâ”€â”€ member4_csrf_get/                  # Member 4: CSRF (GET-based)
-â”‚   â”œâ”€â”€ app.py                         (Port 5004)
-â”‚   â”œâ”€â”€ attacker.html
-â”‚   â””â”€â”€ README.md
-â””â”€â”€ member5_csrf_post/                 # Member 5: CSRF (POST-based)
-    â”œâ”€â”€ app.py                         (Port 5005)
-    â”œâ”€â”€ attacker.html
-    â””â”€â”€ README.md
+├── .gitignore
+├── requirements.txt
+├── README.md                           # Main documentation & mapping table
+├── member1_sqli/                       # Member 1: SQL Injection (Auth Bypass)
+│   ├── app.py                         (Port 5001)
+│   ├── exploit.py
+│   └── README.md
+├── member2_command_injection/         # Member 2: OS Command Injection
+│   ├── app.py                         (Port 5002)
+│   ├── exploit.py
+│   └── README.md
+├── member3_xss/                       # Member 3: Stored Cross-Site Scripting
+│   ├── app.py                         (Port 5003)
+│   ├── exploit_payload.txt
+│   └── README.md
+├── member4_csrf_get/                  # Member 4: CSRF (GET-based)
+│   ├── app.py                         (Port 5004)
+│   ├── attacker.html
+│   └── README.md
+└── member5_csrf_post/                 # Member 5: CSRF (POST-based)
+    ├── app.py                         (Port 5005)
+    ├── attacker.html
+    └── README.md
 ```
 
 ---
 
-## ðŸ‘¥ Member Vulnerability Distribution Matrix
+## Member Vulnerability Distribution Matrix
 
 | Member | Vulnerability Category | Variant | Vulnerable Route | Patched Route | Port |
 | :--- | :--- | :--- | :--- | :--- | :---: |
@@ -53,7 +53,7 @@ cs_assignment/
 
 ---
 
-## ðŸš€ Quickstart & Setup
+## Quickstart & Setup
 
 ### 1. Clone the Repository
 ```bash
@@ -83,16 +83,16 @@ Refer to the individual `README.md` inside each folder for detailed step-by-step
 
 ---
 
-## ðŸ›¡ï¸ Deliverables Overview per Member
+## Deliverables Overview per Member
 
 Every member module satisfies the assignment requirements:
 1. **Identified Vulnerable Code Path**: Clear line-level demonstrations in `app.py`.
 2. **Working Exploit Payload**: Reusable test scripts (`exploit.py`) or HTML trigger pages (`attacker.html`).
-3. **1â€“2 Line Root Cause**: Concise identification of the insecure trust boundary.
+3. **1-2 Line Root Cause**: Concise identification of the insecure trust boundary.
 4. **Code Mitigation**: Direct implementation blocking the identical payload.
 5. **Alternative Mitigations**: Theoretical overview covering defense-in-depth principles.
 
 ---
 
-## ðŸ“œ Academic Integrity & Disclaimer
+## Academic Integrity & Disclaimer
 This repository is developed strictly for educational and instructional purposes as part of university coursework in web security. All exploits and vulnerabilities are simulated inside localized testing environments.
