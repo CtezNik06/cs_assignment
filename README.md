@@ -17,23 +17,23 @@ cs_assignment/
 ├── .gitignore
 ├── requirements.txt
 ├── README.md                           # Main documentation & mapping table
-├── member1_sqli/                       # Member 1: SQL Injection (Auth Bypass)
+├── member1_sqli/                       # Mayank Anand: SQL Injection (Auth Bypass)
 │   ├── app.py                         (Port 5001)
 │   ├── exploit.py
 │   └── README.md
-├── member2_command_injection/         # Member 2: OS Command Injection
+├── member2_command_injection/         # D. RadhaKrishna: OS Command Injection
 │   ├── app.py                         (Port 5002)
 │   ├── exploit.py
 │   └── README.md
-├── member3_xss/                       # Member 3: Stored Cross-Site Scripting
+├── member3_xss/                       # Paarth Gupta: Stored Cross-Site Scripting
 │   ├── app.py                         (Port 5003)
 │   ├── exploit_payload.txt
 │   └── README.md
-├── member4_csrf_get/                  # Member 4: CSRF (GET-based)
+├── member4_csrf_get/                  # Aayushi Bansal: CSRF (GET-based)
 │   ├── app.py                         (Port 5004)
 │   ├── attacker.html
 │   └── README.md
-└── member5_csrf_post/                 # Member 5: CSRF (POST-based)
+└── member5_csrf_post/                 # Nikhil Goyal: CSRF (POST-based)
     ├── app.py                         (Port 5005)
     ├── attacker.html
     └── README.md
@@ -43,13 +43,13 @@ cs_assignment/
 
 ## Member Vulnerability Distribution Matrix
 
-| Member | Vulnerability Category | Variant | Vulnerable Route | Patched Route | Port |
+| Member Name | Assigned Category | Variant | Vulnerable Route | Patched Route | Port |
 | :--- | :--- | :--- | :--- | :--- | :---: |
-| **Member 1** | SQL Injection (SQLi) | In-Band Authentication Bypass | `/vuln` (concatenated SQL) | `/patched` (parameterized queries) | `5001` |
-| **Member 2** | OS Command Injection | Direct Shell Concatenation | `/vuln` (`shell=True` execution) | `/patched` (`shell=False` arg list) | `5002` |
-| **Member 3** | Cross-Site Scripting (XSS)| Stored XSS | `/vuln` (raw HTML rendering) | `/patched` (contextual escaping) | `5003` |
-| **Member 4** | CSRF | GET-based Forged Action | `/vuln` (state mutation via GET) | `/patched` (POST + CSRF token) | `5004` |
-| **Member 5** | CSRF | POST-based Forged Action | `/vuln` (unverified form POST) | `/patched` (Synchronizer token check) | `5005` |
+| **Mayank Anand** (Member 1) | SQL Injection (SQLi) | In-Band Authentication Bypass | `/vuln` (concatenated SQL) | `/patched` (parameterized queries) | `5001` |
+| **D. RadhaKrishna** (Member 2) | OS Command Injection | Direct Shell Concatenation | `/vuln` (`shell=True` execution) | `/patched` (`shell=False` arg list) | `5002` |
+| **Paarth Gupta** (Member 3) | Cross-Site Scripting (XSS)| Stored XSS | `/vuln` (raw HTML rendering) | `/patched` (contextual escaping) | `5003` |
+| **Aayushi Bansal** (Member 4) | CSRF | GET-based Forged Action | `/vuln` (state mutation via GET) | `/patched` (POST + CSRF token) | `5004` |
+| **Nikhil Goyal** (Member 5) | CSRF | POST-based Forged Action | `/vuln` (unverified form POST) | `/patched` (Synchronizer token check) | `5005` |
 
 ---
 

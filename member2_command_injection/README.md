@@ -1,4 +1,4 @@
-﻿# Member 2: OS Command Injection (Direct Shell Concatenation)
+﻿# Member 2: D. RadhaKrishna - OS Command Injection (Direct Shell Concatenation)
 
 ## 1. How to Run & Reproduce
 

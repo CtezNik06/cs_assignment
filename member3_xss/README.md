@@ -1,4 +1,4 @@
-﻿# Member 3: Cross-Site Scripting (Stored XSS)
+﻿# Member 3: Paarth Gupta - Cross-Site Scripting (Stored XSS)
 
 ## 1. How to Run & Reproduce
 

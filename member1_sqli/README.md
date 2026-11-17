@@ -1,4 +1,4 @@
-﻿# Member 1: SQL Injection (In-Band Authentication Bypass)
+﻿# Member 1: Mayank Anand - SQL Injection (In-Band Authentication Bypass)
 
 ## 1. How to Run & Reproduce
 
